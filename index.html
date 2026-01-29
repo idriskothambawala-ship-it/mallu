@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mariya 💙💖</title>
+
+<style>
+/* -------- INTERNAL CSS -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #3ca4ff, #ff81b8);
+    min-height: 100vh;
+    color: #ffbdbd;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px 15px;
+    background: rgb(183, 199, 255);
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    color: #fa88b7;
+    font-size: 2rem;
+}
+
+header p {
+    color: #4a90e2;
+    margin-top: 8px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: #1a7dff;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #4a90e2;
+}
+
+/* Sections */
+section {
+    display: none;
+    padding: 25px 18px;
+    text-align: center;
+}
+
+section.active {
+    display: block;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #ff5fa2;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Heart Animation */
+.heart {
+    font-size: 2rem;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Button inside section */
+.love-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💙 MARIYA THE CUETIIEE💖</h1>
+    <p>A very small place filled with love</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About You</button>
+    <button onclick="showSection('message')">Message</button>
+    <button onclick="showSection('surprise')">Surprise</button>
+</nav>
+
+<section id="home" class="active">
+    <div class="card">
+        <h2>Welcome malluu💫</h2>
+        <p>
+            This little website is made specially for you, Malluu.  
+            Every colors, every words, every click is filled with care.
+        </p>
+        <div class="heart">💖</div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="card">
+        <h2>About You 🌸</h2>
+        <p>
+            You are so so so kind,very very special for me, and someone who brings
+             calm and happiness in my life is only you.  
+            Your smile can make my day better and best💙
+        </p>
+    </div>
+</section>
+
+<section id="message">
+    <div class="card">
+        <h2>A Message 💌</h2>
+        <p id="loveText">
+            Click the button below 👇
+        </p>
+        <button class="love-btn" onclick="changeText()">Tap Here</button>
+    </div>
+</section>
+
+<section id="surprise">
+    <div class="card">
+        <h2>Surprise 🎁</h2>
+        <p>
+          aa time per koi surprise k birthdy gift too nai aapi saktoo mane bhi kharab lage che but I can promise that
+          i will never disappoint you 💖
+        </p>
+        <div class="heart">💙💖</div>
+    </div>
+</section>
+
+<footer>
+    Made with 💙 & 💖 for only you
+    call on 9054053634
+</footer>
+
+<script>
+/* -------- JAVASCRIPT -------- */
+function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(sectionId).classList.add("active");
+}
+
+function changeText() {
+    document.getElementById("loveText").innerText =
+        "never cry,don't do overthinking always stay positive you are the best in the world💕";
+}
+</script>
+
+</body>
+</html>
